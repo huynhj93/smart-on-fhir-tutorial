@@ -27,6 +27,7 @@
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
+          console.log('='.repeat(10), 'PATIENT', '='.repeat(10), '\n', patient);
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
@@ -117,6 +118,7 @@
   }
 
   window.drawVisualization = function(p) {
+    console.log('='.repeat(10), 'pateint is', '='.repeat(10), '\n', p);
     $('#holder').show();
     $('#loading').hide();
     $('#fname').html(p.fname);
