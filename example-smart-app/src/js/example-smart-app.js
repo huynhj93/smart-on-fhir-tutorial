@@ -27,7 +27,7 @@
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
-          console.log('='.repeat(10), 'PATIENT', '='.repeat(10), '\n', patient);
+          console.log('='.repeat(10), 'PATIENT', '='.repeat(10), '\n', JSON.stringify(patient));
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
