@@ -10,6 +10,7 @@
     function onReady(smart)  {
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
+        window.patient = patient;
         var pt = patient.read();
         console.log('='.repeat(10), 'patient is', '='.repeat(10), '\n', patient);
         var obv = smart.patient.api.fetchAll({
